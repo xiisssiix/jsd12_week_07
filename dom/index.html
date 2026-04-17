@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Gallery - สุ่มกองทัพโปเกมอน</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        #findPoke {
+            padding: 10px 25px;
+            font-size: 18px;
+            cursor: pointer;
+            background-color: #ef5350;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            transition: 0.3s;
+        }
+
+        #findPoke:hover {
+            background-color: #d32f2f;
+        }
+
+        #pokemon-container {
+            display: flex;       
+            flex-wrap: wrap;    /* เต็มแถวแล้วขึ้นแถวใหม่ */
+            gap: 15px;          /* ระยะห่างระหว่างการ์ดแต่ละใบ */
+            justify-content: center; 
+        }
+
+        /* ตกแต่งการ์ดโปเกมอน */
+        .pokemon-card {
+            width: 150px;
+            background: white;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border: 1px solid #ddd;
+        }
+
+        .pokemon-card img {
+            width: 120px;
+            height: 120px;
+        }
+
+        .pokemon-card h3 {
+            font-size: 14px;
+            color: #333;
+            margin: 10px 0 0 0;
+            text-transform: capitalize; /* ทำให้ตัวแรกเป็นตัวพิมพ์ใหญ่ */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>สะสมกองทัพโปเกมอน</h1>
+    <button id="findPoke">มาสุ่มโปเกมอนกันเถอะ!</button>
+
+    <div id="pokemon-container"></div>
+
+    <script src="index.js"></script>
+</body>
+</html>

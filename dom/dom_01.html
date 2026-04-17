@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Counter Project</title>
+</head>
+<body>
+
+    <h1 id="counter">0</h1>
+    <button id="addBtn">+1 รัวๆๆ</button>
+
+    <script>
+        let count = 0;
+        const display = document.getElementById("counter");
+        const button = document.getElementById("addBtn");
+
+        button.addEventListener("click", () => {
+            count++;
+            display.innerText = count;
+        });
+    </script>
+
+</body>
+</html>
